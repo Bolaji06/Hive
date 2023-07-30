@@ -29,3 +29,4 @@ package.json
 postcss.config.js
 
 vite.config.js
+*.json
