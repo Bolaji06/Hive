@@ -1,5 +1,6 @@
 
 import { useEffect, useState } from "react";
+import serviceWorker from "../service_worker.jsx"
 
 import axios from "axios";
 
@@ -119,6 +120,15 @@ export default function App(){
     const weatherAstro = weatherData.forecast.forecastday[0].astro;
     //console.log(weatherAstro)
 
+    if("serviceWorker" in navigator){
+      navigator.serviceWorker.register(serviceWorker).then(registration=>{
+        console.log("SW Registered!");
+      }).catch(error=>{
+        console.log(error, "SW Registration Failed");
+      });
+  }else{
+    console.log("Not supported");
+  }
   return (
       <>
       {headerContainer}
@@ -141,4 +151,5 @@ export default function App(){
 
       </>
   )
+
 }
