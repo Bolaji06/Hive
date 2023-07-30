@@ -6,8 +6,8 @@ import axios from "axios";
 
 import Current from "./components/current/Current";
 import Forecast from "./components/forecast/Forecast";
-import searchIcon from "./assets/search-icon.svg"
-import RecentSearch from "./components/current/RecentSearch";
+//import searchIcon from "./assets/search-icon.svg"
+//import RecentSearch from "./components/current/RecentSearch";
 
 
 export default function App(){
@@ -129,6 +129,7 @@ export default function App(){
   }else{
     console.log("Not supported");
   }
+  //serviceWorker.register();
   return (
       <>
       {headerContainer}
