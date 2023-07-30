@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from "react";
-import serviceWorker from "../service_worker.jsx"
+import serviceWorker from "./index.js"
 
 import axios from "axios";
 

@@ -1,4 +1,4 @@
-import logo from "./src/assets/android-chrome-192x192.png"
+import logo from "./assets/android-chrome-192x192.png"
 export default function serviceWorker(){
 
 self.addEventListener("install",e=>{
@@ -9,7 +9,7 @@ self.addEventListener("install",e=>{
     );
   });
   
-  // Fatch resources
+  // Fetch resources and match cache
   self.addEventListener("fetch",e=>{
     e.respondWith(
       caches.match(e.request).then(response=>{
