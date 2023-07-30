@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 
 export default function RecentSearch({inputvalue, savedsearch}){
-    console.log(inputvalue, savedsearch)
+    
    
    //console.log(props)
     // Implement Recent Search

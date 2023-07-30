@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from "react";
-import serviceWorker from "./service_worker.jsx"
+import serviceWorker from "../service_worker"
 
 import axios from "axios";
 
@@ -121,7 +121,7 @@ export default function App(){
     //console.log(weatherAstro)
 
     if("serviceWorker" in navigator){
-      navigator.serviceWorker.register(serviceWorker).then(registration=>{
+      navigator.serviceWorker.register(serviceWorker, {scope: "/"}).then(registration=>{
         console.log("SW Registered!");
       }).catch(error=>{
         console.log(error, "SW Registration Failed");

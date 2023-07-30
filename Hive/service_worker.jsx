@@ -1,10 +1,10 @@
-import logo from "./assets/android-chrome-192x192.png"
+import logo from "../Hive/src/assets/android-chrome-192x192.png"
 export default function serviceWorker(){
 
 self.addEventListener("install",e=>{
     e.waitUntil(
-      caches.open("static").then(cache=>{
-        return cache.addAll(["./", logo]);
+      caches.open("v1").then(cache=>{
+        return cache.addAll(["/", logo]);
       })
     );
   });
@@ -13,7 +13,7 @@ self.addEventListener("install",e=>{
   self.addEventListener("fetch",e=>{
     e.respondWith(
       caches.match(e.request).then(response=>{
-        return response||fetch(e.request);
+        return response || fetch(e.request);
       })
     );
   });
