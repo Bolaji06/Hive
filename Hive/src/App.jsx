@@ -96,7 +96,7 @@ export default function App(){
 
   const headerContainer =
     <header className="py-2 px-3 bg-white">
-      <form className="flex justify-between md:justify-center md:mt-2">
+      <form className="flex justify-between md:justify-center mt-4">
 
         <input placeholder="Search for places..." type="text"
          name={inputValue} value={inputValue}
@@ -120,6 +120,7 @@ export default function App(){
     const weatherAstro = weatherData.forecast.forecastday[0].astro;
     //console.log(weatherAstro)
 
+    // For Service worker
     if("serviceWorker" in navigator){
       navigator.serviceWorker.register(serviceWorker, {scope: "/"}).then(registration=>{
         console.log("SW Registered!");
@@ -129,6 +130,8 @@ export default function App(){
   }else{
     console.log("Not supported");
   }
+
+  
   //serviceWorker.register();
   return (
       <>

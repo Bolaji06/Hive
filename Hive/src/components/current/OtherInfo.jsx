@@ -12,7 +12,7 @@ export default function OtherInfo(props){
         <section className="px-1">
             <div className="grid grid-cols-3 px-2 text-left gap-2">
                 <div className="rounded-md bg-[#C6BEBE] p-2">
-                    <div className="px-2 md:px-0">
+                    <div className="">
                         <p className="text-[#F9F7F3] text-xs">Wind</p>
                         <h2 className="text-yellow-700 py-1 text-4xl
                         md:text-2xl lg:text-4xl">
@@ -23,7 +23,7 @@ export default function OtherInfo(props){
 
                 </div>
                 <div className="p-2 rounded-md bg-[#C6BEBE]">
-                <div className="px-2 md:px-0">
+                <div className="">
                         <p className="text-[#F9F7F3] text-xs">Pressure</p>
                         <h2 className="text-yellow-700 py-1 text-4xl
                         md:text-2xl lg:text-4xl">
@@ -35,7 +35,7 @@ export default function OtherInfo(props){
 
                 </div>
                 <div className="p-2 rounded-md bg-[#C6BEBE]">
-                <div className="px-2 md:px-0">
+                <div className="">
                         <p className="text-[#F9F7F3] text-xs">UV</p>
                         <h2 className="text-yellow-700 py-1 text-4xl
                         md:text-2xl lg:text-4xl">
@@ -45,7 +45,7 @@ export default function OtherInfo(props){
 
                 </div>
                 <div className="p-2 rounded-md bg-[#C6BEBE]">
-                <div className="px-2 md:px-0">
+                <div className="">
                         <p className="text-[#F9F7F3] text-xs">Humidity</p>
                         <h2 className="text-yellow-700 py-1 text-4xl
                         md:text-2xl lg:text-4xl">
@@ -57,7 +57,7 @@ export default function OtherInfo(props){
 
                 </div>
                 <div className="p-2 rounded-md bg-[#C6BEBE]">
-                <div className="px-2 md:px-0">
+                <div className="">
                         <p className="text-[#F9F7F3] text-xs">Gust</p>
                         <h2 className="text-yellow-700 py-1 text-4xl
                         md:text-2xl lg:text-4xl">
@@ -69,7 +69,7 @@ export default function OtherInfo(props){
 
                 </div>
                 <div className="p-2 rounded-md bg-[#C6BEBE]">
-                <div className="px-2 md:px-0">
+                <div className="">
                         <p className="text-[#F9F7F3] text-xs">Sunrise & Sunset</p>
                         <div className="mt-2 flex flex-col gap-2 md:gap-0 lg:gap-2">
                             <div className="flex items-center gap-1">

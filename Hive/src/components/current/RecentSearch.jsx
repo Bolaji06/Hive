@@ -21,7 +21,7 @@ export default function RecentSearch({inputvalue, savedsearch}){
         </header>
 
             {savedsearch.length > 0 ? (
-                 <div className="scroller py-2 bg-[#C6BEBE] mt-3
+                 <div className="scroller py-3 bg-[#C6BEBE] mt-3
                  overflow-x-auto w-full ">
                  
                      
