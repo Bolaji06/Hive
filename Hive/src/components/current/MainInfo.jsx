@@ -1,4 +1,6 @@
 
+import { easeIn, easeInOut, motion } from "framer-motion";
+
 import cloudy from "../../assets/cloudy.png"
 import clock from "../../assets/clock.svg"
 
@@ -12,18 +14,22 @@ function formatDate(inputDate){
     const day = dateParts[2];
 
     const date =  new Date(inputDate);
-    const dayOfWeek = daysOfWeek[date.getDay()];
+    const dayOfWeek = daysOfWeek[date.getDay() + 1];
     return `${dayOfWeek} ${day} ${year}`
 
 }
 export default function MainInfo(props){
     //console.log(props)
-
     const spiltTimeDate = props.localtime.split(" ");
     const date = spiltTimeDate[0]
 
     const timeString = formatDate(date)
     const time = spiltTimeDate[1]
+
+    const animationVariant = {
+        hidden: {opacity: 0},
+        visible: {opacity: 1},
+    }
 
     const mainInfoContainer = (
         <section className="my-2 px-2 mb-8 py-4 bg-white w-full">
@@ -41,16 +47,35 @@ export default function MainInfo(props){
                    
                     <p>{props.text}</p>
                 </div>
-                <div className="text-center">
-                    <h2 className="text-5xl">
-                        {props.isCelcius ? <span>{props.tempCel}&deg;C</span>
-                        : <span>{props.tempFh}&deg;F</span>}</h2>
-                    <p className="p-1">{props.region}, {props.country}</p>
-                </div>
+                
+                    <motion.div
+                        key={props.isCelcius ? "celcius" : "fahrenheit"}>
+                        <div className="text-center">
+                                <h2 className="text-5xl">
+                                    {props.isCelcius ? 
+                                    (<motion.span
+                                        initial="hidden"
+                                        animate="visible"
+                                        variants={animationVariant}
+                                        transition={{duration: 0.5}} >
+
+                                        <span>{props.tempCel}&deg;C</span>
+                                    </motion.span>)
+                                    : (<motion.span 
+                                        initial="hidden"
+                                        animate="visible"
+                                        variants={animationVariant}
+                                        transition={{duration: 0.5}}>
+
+                                            <span>{props.tempFh}&deg;F</span>
+                                      </motion.span>)}
+                                </h2>
+                                
+                            <p className="p-1">{props.region}, {props.country}</p>
+                        </div>
+                    </motion.div >
+                
             </div>
-
-
-
         </section> )
     return (
         <>

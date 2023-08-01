@@ -1,6 +1,7 @@
+import CircularProgress from "./CircularProgress"
 
 
-export default function Header(){
+export default function Header({willRain}){
 
     const headerContainer = 
         <header className="px-3 py-4">
@@ -8,12 +9,10 @@ export default function Header(){
                 <h1 className="text-2xl font-semibold">
                     Weather Forecast
                 </h1>
-
-                <div className="flex items-center gap-2">
-                    <p className="text-sm">Chance Of Rain</p>
-                    <input className="rounded-full h-1"
-                    type="range" name="ch-rain" id="ch-rain" />
-                    <p className="text-sm">30%</p>
+                <div>
+                    <CircularProgress 
+                            targetProgress={willRain}
+                            duration={2000}/>
                 </div>
             </div>
         </header>

@@ -86,3 +86,41 @@ input[type="range"]::-webkit-slider-thumb{
     transform: translate(24px, 0);
   }
 }
+
+
+.progress-container {
+  position: relative;
+  text-align: center;
+}
+
+.progress-circle {
+  transform: rotate(-90deg);
+}
+
+.progress-ring {
+  fill: transparent;
+  stroke: #3498db; /* Change this color to your desired color */
+  stroke-width: 4;
+}
+
+.progress-text {
+  position: absolute;
+  top: 60%;
+  left: 54%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+.chance{
+  position: absolute;
+  z-index: 1;
+  line-height: 16px;
+  font-size: .9rem;
+  top: 18px;
+  left: 0;
+  right: 0;
+  margin-bottom: 16px;
+  text-align: center;
+}
+

@@ -3,11 +3,13 @@ import { useEffect, useState } from "react";
 import serviceWorker from "../service_worker"
 
 import axios from "axios";
+import { motion } from "framer-motion"
 
 import Current from "./components/current/Current";
 import Forecast from "./components/forecast/Forecast";
 //import searchIcon from "./assets/search-icon.svg"
 //import RecentSearch from "./components/current/RecentSearch";
+
 
 
 export default function App(){
@@ -24,6 +26,7 @@ export default function App(){
       return !curState
     });
   }
+  //console.log(weatherData)
 
   function inputOnChange(e){
     const newValue = e.target.value;
@@ -42,6 +45,7 @@ export default function App(){
   //const cURI =  `http://api.weatherapi.com/v1/current.json?key=d8f60fbbb7fe4fc9a25152241232207&q=London`
 
   const URI = `https://api.weatherapi.com/v1/forecast.json?key=${KEY}&q=${inputValue}&days=1`;
+  // https://api.weatherapi.com/v1/forecast.json?key=&q=${inputValue}&days=1
 
   useEffect(() =>{
 
@@ -87,7 +91,7 @@ export default function App(){
   // }
 
  
-  //console.log(weatherData)
+  console.log(weatherData)
 
   // function handleSubmit(e){
   //   e.preventDefault();
@@ -110,15 +114,25 @@ export default function App(){
         </button> */}
       </form>
       <section className="mt-3 flex items-center gap-3">
-        <button onClick={handleCelcius} className="flex text-white rounded-full justify-center items-center w-8 h-8 bg-[#191D38]">
-         {isCelcius ? "F" : "C"}
-        </button>
+        <motion.button 
+          whileHover={{scale: 1.1}}
+          whileTap={{scale: 0.9}} >
+          <button onClick={handleCelcius} className="flex text-white rounded-full justify-center items-center w-8 h-8 bg-[#191D38]">
+          {isCelcius ? "F" : "C"}
+          </button>
+        </motion.button>
+        
       </section>
 
     </header>
 
     const weatherAstro = weatherData.forecast.forecastday[0].astro;
     //console.log(weatherAstro)
+
+    const todayForecast = weatherData.forecast.forecastday[0].hour
+    const chanceOfRain = weatherData.forecast.forecastday[0].day.daily_chance_of_rain;
+    console.log(chanceOfRain)
+    //console.log(todayForecast)
 
     // For Service worker
     if("serviceWorker" in navigator){
@@ -149,7 +163,8 @@ export default function App(){
           />
 
         <Forecast
-          forecast={weatherData.forecast}
+          forecast={todayForecast}
+          chanceOfRain={chanceOfRain}
         />
       </section>
 

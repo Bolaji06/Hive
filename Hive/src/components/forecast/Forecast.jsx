@@ -4,14 +4,15 @@ import PopularCityTemp from "./PopularCityTemp"
 import Slider from "./Slider"
 
 
-export default function Forecast(){
-
+export default function Forecast({forecast, chanceOfRain}){
 
     return (
         <>
         <div className="md:w-[70%]">
-            <Header />
-            <Slider /> 
+            <Header 
+            willRain={chanceOfRain}/>
+            <Slider 
+            forecastData={forecast}/> 
             <PlaceAbout />
             <PopularCityTemp />
         </div>
