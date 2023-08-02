@@ -42,7 +42,7 @@ export default function CircularProgress({ targetProgress, duration }){
     return (
         <>
           <div className="progress-container">
-            <p className="chance">Chance <br /> Of rain</p>
+            <p className="chance">Chance <br /> Of Rain</p>
             <svg className="progress-circle" width={100} height={100}>
                 <circle className="progress-ring" cx={50} cy={50} r={45}>
                 </circle>

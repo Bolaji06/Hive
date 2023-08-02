@@ -91,7 +91,7 @@ export default function App(){
   // }
 
  
-  console.log(weatherData)
+  //console.log(weatherData)
 
   // function handleSubmit(e){
   //   e.preventDefault();
@@ -131,8 +131,6 @@ export default function App(){
 
     const todayForecast = weatherData.forecast.forecastday[0].hour
     const chanceOfRain = weatherData.forecast.forecastday[0].day.daily_chance_of_rain;
-    console.log(chanceOfRain)
-    //console.log(todayForecast)
 
     // For Service worker
     if("serviceWorker" in navigator){

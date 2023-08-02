@@ -5,7 +5,7 @@ export default function Slider({forecastData}){
    //console.log(forecastData)
 
     
-    const forecastSlider = <section className="mt-10">
+    const forecastSlider = <section className="mt-6 mb-20">
         <h1 className="today px-4 mb-6 font-bold">Today</h1>
        
             <div className="scroller flex gap-10 w-full overflow-x-auto px-4 whitespace-nowrap">

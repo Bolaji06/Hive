@@ -1,20 +1,22 @@
 import Header from "./Header";
-import PlaceAbout from "./PlaceAbout"
-import PopularCityTemp from "./PopularCityTemp"
 import Slider from "./Slider"
+import Footer from "./Footer";
+import PopularCityTemp from "./PopularCityTemp"
 
 
 export default function Forecast({forecast, chanceOfRain}){
 
     return (
         <>
-        <div className="md:w-[70%]">
+        <div className="forecast md:w-[70%]">
             <Header 
-            willRain={chanceOfRain}/>
+                willRain={chanceOfRain}
+            />
             <Slider 
-            forecastData={forecast}/> 
-            <PlaceAbout />
+                forecastData={forecast}
+            /> 
             <PopularCityTemp />
+            {/* <Footer /> */}
         </div>
             
         </>
