@@ -15,8 +15,7 @@ export default function PopularCityTempearture(){
                             cityData.map(async (city) =>{
                                 const URI = `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city.city}`;
                                 const response = await fetch(URI);
-                                const data = await response.json();
-                                console.log(city)    
+                                const data = await response.json();   
  
                                 return {
                                     name: city.city,

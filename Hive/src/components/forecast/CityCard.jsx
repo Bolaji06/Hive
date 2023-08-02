@@ -1,7 +1,6 @@
 
 
 export function CityCard({cityData}){
-    console.log(cityData)
 
     const style = {
         backgroundImage: `url(${cityData.image})`
