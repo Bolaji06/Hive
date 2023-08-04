@@ -117,7 +117,7 @@ export default function App(){
         <motion.button 
           whileHover={{scale: 1.1}}
           whileTap={{scale: 0.9}} >
-          <button onClick={handleCelcius} className="flex text-white rounded-full justify-center items-center w-8 h-8 bg-[#191D38]">
+          <button onClick={handleCelcius} className="flex text-white text-xl rounded-full justify-center items-center w-9 h-9 bg-[#191D38]">
           {isCelcius ? "F" : "C"}
           </button>
         </motion.button>

@@ -27,9 +27,9 @@ export default function RecentSearch({inputvalue, savedsearch}){
                      
                          <ul className="flex">
                             {savedsearch.map((item, index) => {
-                               return (  <li key={index} className=" bg-yellow-100 px-3 w-28 ml-2 rounded-tl-2xl rounded-bl-2xl
+                               return (  <li key={index} className=" capitalize bg-yellow-100 px-3 w-28 ml-2 rounded-tl-2xl rounded-bl-2xl
                                relative inline-block pl-4 py-1 text-sm whitespace-nowrap text-ellipsis
-                         max-w-xs text-[#191D36] font-semibold cursor-pointer">{item[0].toUpperCase() + item.slice(1, item.length)}
+                         max-w-xs text-[#191D36] font-semibold cursor-pointer">{item}
                          <div className="absolute top-[10px] left-1
                          bg-[#C6BEBE] w-2 h-2 rounded-full">
 
