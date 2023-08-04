@@ -1,6 +1,6 @@
 
 
-export function CityCard({cityData}){
+export default function CityCard({cityData}){
     console.log(cityData)
 
     const style = {
