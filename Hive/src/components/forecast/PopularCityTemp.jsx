@@ -40,17 +40,17 @@ export default function PopularCityTempearture(){
         <header className="mt-2">
             <h1 className="pop-head text-slate-200 py-1 text-center mt-2
             md:text-xl">Popular City</h1>
+               
+        </header>
 
-                    <div className="scroller text-center py-4 w-full flex 
-        items-center overflow-x-auto whitespace-nowrap">
+        <div className="scroller text-center py-4 w-full flex 
+                        items-center overflow-x-auto whitespace-nowrap">
            
           {cityDataState.map((city) => {
             return (<CityCard key={city.city} cityData={city} />)
           })}
             
         </div>
-        </header>
-
 
     </div>
 </section>
