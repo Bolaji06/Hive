@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import cityData from "../../data"
 import  CityCard  from "./CityCard";
+
 export default function PopularCityTempearture(){
     const [cityDataState, setCityDataState] = useState([]);
 
@@ -13,7 +14,7 @@ export default function PopularCityTempearture(){
                     
                         const updatedCityData = await Promise.all(
                             cityData.map(async (city) =>{
-                                const URI = `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city.city}`;
+                                const URI = `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city.city}`;
                                 const response = await fetch(URI);
                                 const data = await response.json();   
  
