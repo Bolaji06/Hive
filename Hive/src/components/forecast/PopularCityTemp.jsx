@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from "react";
 import cityData from "../../data"
-import { CityCard } from "./CityCard";
+import  CityCard  from "./CityCard";
 export default function PopularCityTempearture(){
     const [cityDataState, setCityDataState] = useState([]);
 
