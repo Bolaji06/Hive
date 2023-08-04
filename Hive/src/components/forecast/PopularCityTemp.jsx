@@ -39,6 +39,12 @@ export default function PopularCityTempearture(){
         <header className="mt-2">
             <h1 className="pop-head text-slate-200 py-1 text-center mt-2
             md:text-xl">Popular City</h1>
+            <ul>
+                <li>List of Popular city</li>
+                <li>List of Popular city</li>
+                <li>List of Popular city</li>
+                <li>List of Popular city</li>
+            </ul>
         </header>
 
         <div className="scroller text-center py-4 w-full flex 
