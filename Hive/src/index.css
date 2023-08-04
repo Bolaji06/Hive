@@ -16,7 +16,6 @@ input::placeholder{
 }
 .scroller::-webkit-scrollbar{
   display: none;
-
 }
 .today::after{
   content: "";

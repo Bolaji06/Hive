@@ -17,7 +17,7 @@ import tokyo from "../src/images/tokyo.jpg";
 import toronto from "../src/images/toronto.webp";
 import seoul from "../src/images/seoul.webp";
 import shanghai from "../src/images/shanghai.jpeg";
-import instabul from "../src/images/instabul.webp";
+
 
 
 
