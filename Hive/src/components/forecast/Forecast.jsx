@@ -1,6 +1,6 @@
 import Header from "./Header";
 import Slider from "./Slider"
-import Footer from "./Footer";
+
 import PopularCityTemp from "./PopularCityTemp"
 
 
@@ -16,7 +16,7 @@ export default function Forecast({forecast, chanceOfRain}){
                 forecastData={forecast}
             /> 
             <PopularCityTemp />
-            {/* <Footer /> */}
+             
         </div>
             
         </>

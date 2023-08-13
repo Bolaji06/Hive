@@ -3,7 +3,8 @@ import waves from "../../assets/wave.svg"
 
 export default function Footer(){
     const footerContainer = (
-     <footer className="flex justify-between items-center">
+     <footer className="flex justify-between 
+     absolut items-center border-2 border-red-600">
         <div>
             <h3>More Works</h3>
             <a href="">My work link</a>

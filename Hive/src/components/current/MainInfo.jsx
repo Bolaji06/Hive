@@ -14,7 +14,7 @@ function formatDate(inputDate){
     const day = dateParts[2];
 
     const date =  new Date(inputDate);
-    const dayOfWeek = daysOfWeek[date.getDay() + 1];
+    const dayOfWeek = daysOfWeek[date.getDay()];
     return `${dayOfWeek} ${day} ${year}`
 
 }
@@ -23,8 +23,14 @@ export default function MainInfo(props){
     const spiltTimeDate = props.localtime.split(" ");
     const date = spiltTimeDate[0]
 
+    console.log(date)
+
+    
+
     const timeString = formatDate(date)
     const time = spiltTimeDate[1]
+
+    console.log(timeString)
 
     const animationVariant = {
         hidden: {opacity: 0},
@@ -39,7 +45,7 @@ export default function MainInfo(props){
                 </div>
 
                 <div className="my-4 text-center text-[#191D38]">
-                    <p>Today, <span>{timeString}</span></p>
+                    <p>{date}</p>
                     <div className="mt-1 flex items-center justify-center gap-1">
                          <img className="w-4" src={clock} alt="" />
                          <p className="font-semibold">{time}</p>

@@ -9,24 +9,24 @@ export default function PopularCityTempearture(){
     const API_KEY = "105367d1d0c5401a96e82941232907";
     
     useEffect(() =>{
-        const fetchCityData = async () =>{
-            try {
-                const fetchCity = await Promise.all(
-                    cityData.map(async (city) => {
-                        const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city.city}`);
-                        const data = await response.json();
+        const fetchCityData = async ()=>{
+            try{
+               const fetchData = await Promise.all(
+                cityData.map( async (city) =>{
+                    const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city.city}`);
+                    const data = await response.json();
 
-                        return {
-                            name: city.city,
-                            image: city.image,
-                            temperature: data.current.temp_c,
-                        }
-                       
-                    }) 
-                )
-                setCityDataState(fetchCity)
-            } catch (error) {
-                console.log(error)
+                    return {
+                        name: city.city,
+                        image: city.image,
+                        temperature: data.current.temp_c,
+                    }
+                })
+               )
+               setCityDataState(fetchData);
+            }
+            catch(error){
+                console.log(error);
             }
         }
         fetchCityData();
@@ -41,7 +41,7 @@ export default function PopularCityTempearture(){
                
         </header>
 
-        <div className="scroller text-center py-4 w-full flex 
+        <div className="scroller text-center py-4 w-full flex cursor-pointer
                         items-center overflow-x-auto whitespace-nowrap">
            
           {cityDataState.map((city) => {

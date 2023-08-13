@@ -25,9 +25,7 @@ input::placeholder{
   height: 3px;
   background-color: #a16207;
 }
-input[type="range"]::-webkit-slider-thumb{
-  -webkit-appearance: none;
-}
+
 .lds-ellipsis {
   display: inline-block;
   position: relative;
